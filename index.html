@@ -1,27 +1,24 @@
+<!---Se actualiza el boton ver detalle para poder ingresar a la opcion--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torre Central - Control de Activos</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <div id="loginView" class="auth-container">
     <div class="auth-card">
-
         <div class="logo">
-            <div class="logo-icon">TC</div>
+            <img src="https://via.placeholder.com/65" alt="Logo Torre Central" class="mb-2">
             <h1>Torre Central</h1>
             <p>Control de Activos</p>
         </div>
 
         <form id="loginForm">
-
             <div class="mb-3">
                 <label for="loginCorreo">Correo electrónico</label>
                 <input type="email" id="loginCorreo" class="form-control" maxlength="100">
@@ -39,7 +36,6 @@
             <button type="submit" class="btn btn-primary w-100">
                 Iniciar sesión
             </button>
-
         </form>
 
         <div class="auth-link">
@@ -57,25 +53,19 @@
             <small>Activos: activos@duoc.cl / activos123</small>
             <small>Arrendatario: cliente@gmail.com / cliente123</small>
         </div>
-
     </div>
 </div>
 
-
 <div id="registroView" class="auth-container oculto">
-
     <div class="auth-card registro-card">
-
         <div class="logo">
-            <div class="logo-icon">TC</div>
+            <img src="https://via.placeholder.com/65" alt="Logo Torre Central" class="mb-2">
             <h1>Crear cuenta</h1>
             <p>Torre Central</p>
         </div>
 
         <form id="registroForm">
-
             <div class="row">
-
                 <div class="col-md-6 mb-3">
                     <label for="run">RUN</label>
                     <input type="text" id="run" class="form-control" maxlength="9">
@@ -136,7 +126,6 @@
                     <input type="password" id="confirmarPassword" class="form-control">
                     <div id="errorConfirmarPassword" class="error"></div>
                 </div>
-
             </div>
 
             <div id="registroMensaje" class="mensaje"></div>
@@ -144,7 +133,6 @@
             <button type="submit" class="btn btn-primary w-100">
                 Crear cuenta
             </button>
-
         </form>
 
         <div class="auth-link">
@@ -153,103 +141,90 @@
                 Iniciar sesión
             </button>
         </div>
-
     </div>
 </div>
 
-
 <div id="dashboardView" class="oculto">
-
     <nav class="navbar navbar-dark bg-dark dashboard-navbar">
-        <div class="container-fluid">
-
-            <button class="btn btn-dark menu-button" onclick="toggleSidebar()">
+        <div class="container-fluid position-relative d-flex justify-content-between align-items-center">
+            <button class="btn btn-dark menu-button z-1" onclick="toggleSidebar()">
                 ☰
             </button>
 
-            <span class="navbar-brand">
+            <span class="navbar-brand position-absolute start-50 translate-middle-x m-0 fw-bold">
                 Torre Central
             </span>
 
-            <div class="user-info">
-                <span id="usuarioNombre"></span>
+            <div class="user-info d-flex align-items-center gap-2 z-1">
+                <span id="usuarioNombre" class="text-white small"></span>
                 <button class="btn btn-outline-light btn-sm" onclick="cerrarSesion()">
                     Cerrar sesión
                 </button>
             </div>
-
         </div>
     </nav>
 
-
     <div class="dashboard-layout">
-
         <aside id="sidebar" class="sidebar">
-
             <div class="sidebar-title">
                 CONTROL DE ACTIVOS
             </div>
 
             <button onclick="mostrarSeccion('inicio')">
-                 Inicio
+                Inicio
             </button>
 
             <div id="menuSolicitudes">
                 <button onclick="mostrarSeccion('solicitudes')">
-                     Solicitudes
+                    Solicitudes
                 </button>
             </div>
 
             <div id="menuOrdenes">
                 <button onclick="mostrarSeccion('ordenes')">
-                     Órdenes de trabajo
+                    Órdenes de trabajo
                 </button>
             </div>
 
             <div id="menuActivos">
                 <button onclick="mostrarSeccion('activos')">
-                     Activos
+                    Activos
                 </button>
             </div>
 
             <div id="menuMantenimientos">
                 <button onclick="mostrarSeccion('mantenimientos')">
-                     Mantenimientos
+                    Mantenimientos
                 </button>
             </div>
 
             <div id="menuUsuarios">
                 <button onclick="mostrarSeccion('usuarios')">
-                     Usuarios
+                    Usuarios
                 </button>
             </div>
 
             <div id="menuReportes">
                 <button onclick="mostrarSeccion('reportes')">
-                     Reportes
+                    Reportes
                 </button>
             </div>
 
             <div id="menuFalla">
                 <button onclick="mostrarSeccion('reportar')">
-                     Reportar falla
+                    Reportar falla
                 </button>
             </div>
-
         </aside>
 
-
         <main class="main-content">
-
             <section id="seccionInicio">
-
                 <div class="page-title">
                     <h2>Dashboard</h2>
                     <p id="mensajeBienvenida"></p>
                 </div>
 
                 <div class="dashboard-cards">
-
                     <div class="stat-card">
                         <div>
                             <span>Activos</span>
@@ -278,43 +253,34 @@
                         </div>
                         <div class="stat-icon">⚠</div>
                     </div>
-
                 </div>
 
                 <div class="content-card">
                     <h4>Resumen del sistema</h4>
-
                     <p>
                         Torre Central cuenta con un sistema digital para
                         controlar activos, solicitudes de mantenimiento,
                         órdenes de trabajo y usuarios.
                     </p>
-
                     <div class="alert alert-info">
                         Sistema funcionando correctamente.
                     </div>
                 </div>
-
             </section>
 
-
             <section id="seccionSolicitudes" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Solicitudes de mantenimiento</h2>
                     <p>Gestión de solicitudes realizadas por los arrendatarios.</p>
                 </div>
 
                 <div class="content-card">
-
                     <button class="btn btn-primary mb-3" onclick="mostrarSeccion('reportar')">
                         + Nueva solicitud
                     </button>
 
                     <div class="table-responsive">
-
                         <table class="table table-hover">
-
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -323,37 +289,29 @@
                                     <th>Estado</th>
                                 </tr>
                             </thead>
-
                             <tbody id="tablaSolicitudes"></tbody>
-
                         </table>
-
                     </div>
-
                 </div>
-
             </section>
 
-
             <section id="seccionOrdenes" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Órdenes de trabajo</h2>
                     <p>Órdenes asignadas a técnicos.</p>
                 </div>
 
                 <div class="content-card">
-
                     <div class="order-card">
                         <div>
                             <h5>OT-001 - Ascensor 2</h5>
                             <p>Piso 1</p>
-                            <span class="badge bg-warning">
+                            <span class="badge bg-warning text-dark">
                                 En ejecución
                             </span>
                         </div>
 
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary" onclick="verDetalleOrden('OT-001', 'Ascensor 2', 'Piso 1', 'En ejecución', 'Falla en sistema electromecánico de apertura de puertas.')">
                             Ver detalle
                         </button>
                     </div>
@@ -367,33 +325,26 @@
                             </span>
                         </div>
 
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary" onclick="verDetalleOrden('OT-002', 'Generador eléctrico', 'Sótano', 'Finalizada', 'Mantenimiento preventivo y cambio de filtros completado.')">
                             Ver detalle
                         </button>
                     </div>
-
                 </div>
-
             </section>
 
-
             <section id="seccionActivos" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Catálogo de activos</h2>
                     <p>Inventario digital de Torre Central.</p>
                 </div>
 
                 <div class="content-card">
-
                     <button class="btn btn-primary mb-3">
                         + Nuevo activo
                     </button>
 
                     <div class="table-responsive">
-
                         <table class="table table-hover">
-
                             <thead>
                                 <tr>
                                     <th>Código</th>
@@ -403,34 +354,25 @@
                                     <th>Estado</th>
                                 </tr>
                             </thead>
-
                             <tbody id="tablaActivos"></tbody>
-
                         </table>
-
                     </div>
-
                 </div>
-
             </section>
 
-
             <section id="seccionMantenimientos" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Mantenimientos</h2>
                     <p>Programación de mantenimientos preventivos y predictivos.</p>
                 </div>
 
                 <div class="content-card">
-
                     <div class="maintenance-item">
                         <div>
                             <h5>Ascensor 1</h5>
                             <p>Mantenimiento preventivo mensual</p>
                         </div>
-
-                        <span class="badge bg-warning">
+                        <span class="badge bg-warning text-dark">
                             Próximo
                         </span>
                     </div>
@@ -440,30 +382,22 @@
                             <h5>Sistema de climatización</h5>
                             <p>Mantenimiento predictivo</p>
                         </div>
-
                         <span class="badge bg-success">
                             Programado
                         </span>
                     </div>
-
                 </div>
-
             </section>
 
-
             <section id="seccionUsuarios" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Usuarios</h2>
                     <p>Administración de usuarios del sistema.</p>
                 </div>
 
                 <div class="content-card">
-
                     <div class="table-responsive">
-
                         <table class="table table-hover">
-
                             <thead>
                                 <tr>
                                     <th>RUN</th>
@@ -472,27 +406,19 @@
                                     <th>Rol</th>
                                 </tr>
                             </thead>
-
                             <tbody id="tablaUsuarios"></tbody>
-
                         </table>
-
                     </div>
-
                 </div>
-
             </section>
 
-
             <section id="seccionReportes" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Reportes</h2>
                     <p>Información consolidada para la toma de decisiones.</p>
                 </div>
 
                 <div class="dashboard-cards">
-
                     <div class="report-card">
                         <h5>Costos de mantenimiento</h5>
                         <strong>$4.850.000</strong>
@@ -507,33 +433,34 @@
                         <h5>Mantenimientos cumplidos</h5>
                         <strong>82%</strong>
                     </div>
-
                 </div>
 
                 <div class="content-card">
-
                     <button class="btn btn-success">
                         Exportar reporte
                     </button>
-
                 </div>
-
             </section>
 
-
             <section id="seccionReportar" class="dashboard-section oculto">
-
                 <div class="page-title">
                     <h2>Reportar falla</h2>
                     <p>Ingrese los datos de la falla o reparación solicitada.</p>
                 </div>
 
+                <div class="content-card mb-4">
+                    <h5>Instrucciones de reporte:</h5>
+                    <ul>
+                        <li>Compruebe la ubicación física del activo antes de hacer la solicitud.</li>
+                        <li>Indique cualquier ruido, fuga o falla electromecánica observada.</li>
+                        <li>Las solicitudes urgentes serán revisadas en un plazo máximo de 2 horas.</li>
+                    </ul>
+                </div>
+
                 <div class="content-card">
-
                     <form id="formSolicitud">
-
                         <div class="mb-3">
-                            <label>Activo</label>
+                            <label for="activoSolicitud">Activo</label>
                             <select id="activoSolicitud" class="form-select">
                                 <option value="">Seleccione un activo</option>
                                 <option>Ascensor 1</option>
@@ -545,32 +472,43 @@
                         </div>
 
                         <div class="mb-3">
-                            <label>Descripción de la falla</label>
-                            <textarea id="descripcionSolicitud"
-                                      class="form-control"
-                                      maxlength="500"
-                                      rows="5"></textarea>
+                            <label for="descripcionSolicitud">Descripción de la falla</label>
+                            <textarea id="descripcionSolicitud" class="form-control" maxlength="500" rows="5"></textarea>
                         </div>
 
                         <div id="solicitudMensaje" class="mensaje"></div>
 
-                        <button class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             Enviar solicitud
                         </button>
-
                     </form>
-
                 </div>
-
             </section>
-
         </main>
-
     </div>
-
 </div>
 
-<script src="validaciones.js"></script>
+<div class="modal fade" id="modalDetalleOrden" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDetalleTitulo">Detalle de Orden</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Ubicación:</strong> <span id="modalDetalleUbicacion"></span></p>
+        <p><strong>Estado:</strong> <span id="modalDetalleEstado"></span></p>
+        <p><strong>Descripción:</strong></p>
+        <p id="modalDetalleDescripcion" class="text-muted"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="validaciones.js"></script>
 </body>
 </html>

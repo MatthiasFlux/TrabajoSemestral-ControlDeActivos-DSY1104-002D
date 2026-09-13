@@ -40,22 +40,12 @@ body {
     margin-bottom: 30px;
 }
 
-.logo-icon {
-    width: 65px;
-    height: 65px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0d6efd;
-    color: white;
-    border-radius: 12px;
-    font-size: 22px;
-    font-weight: bold;
+.logo img {
+    border-radius: 8px;
 }
 
 .logo h1 {
-    margin: 15px 0 5px;
+    margin: 10px 0 5px;
     font-size: 28px;
 }
 
@@ -141,6 +131,10 @@ label {
     color: white;
     flex-shrink: 0;
     transition: 0.3s;
+}
+
+.sidebar.cerrada {
+    margin-left: -250px;
 }
 
 .sidebar-title {
@@ -264,7 +258,6 @@ label {
 }
 
 @media (max-width: 992px) {
-
     .dashboard-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -272,11 +265,9 @@ label {
     .sidebar {
         width: 210px;
     }
-
 }
 
 @media (max-width: 768px) {
-
     .dashboard-layout {
         display: block;
     }
@@ -307,11 +298,9 @@ label {
         align-items: flex-start;
         gap: 15px;
     }
-
 }
 
 @media (max-width: 576px) {
-
     .auth-card {
         padding: 25px 20px;
     }
@@ -323,5 +312,4 @@ label {
     .page-title h2 {
         font-size: 24px;
     }
-
 }
