@@ -1,0 +1,102 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #212529;
+}
+
+/* Usabilidad RNF-02 botones de gran tamanio para interactividad tactil */
+.btn-lg-touch {
+    min-height: 48px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.btn-celeste {
+    background-color: #4cc9f0 !important;
+    border-color: #48cae4 !important;
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.btn-celeste:hover {
+    background-color: #00b4d8 !important;
+    color: #ffffff !important;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #e3e6f0;
+}
+
+.dashboard-layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    background: #212529;
+    color: white;
+    flex-shrink: 0;
+    transition: margin 0.3s ease;
+}
+
+.sidebar.cerrada {
+    margin-left: -260px;
+}
+
+.sidebar-title {
+    padding: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #adb5bd;
+    border-bottom: 1px solid #343a40;
+}
+
+.sidebar-link {
+    display: block;
+    color: #ced4da;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #2b3035;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: #343a40;
+    color: #ffffff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 25px;
+    overflow-x: hidden;
+}
+
+.mensaje {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Compatibilidad movil RNF-03 */
+@media (max-width: 768px) {
+    .dashboard-layout {
+        display: block;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar.cerrada {
+        display: none;
+    }
+    .main-content {
+        padding: 15px;
+    }
+}
