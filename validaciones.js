@@ -1,4 +1,4 @@
-// Base de datos simulada
+
 const usuarios = [
     { correo: "jefe@torrecentral.cl", pass: "123456", nombre: "Roberto Gómez", rol: "Jefe de Mantenimiento" },
     { correo: "arrendatario@torrecentral.cl", pass: "123456", nombre: "Empresa TechCorp", rol: "Arrendatario" }
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     configurarFormularios();
 });
 
-// Login y registro
+
 function cargarCredenciales(correo, pass) {
     if (document.getElementById("loginCorreo")) {
         document.getElementById("loginCorreo").value = correo;
@@ -69,7 +69,7 @@ function configurarAuth() {
     }
 }
 
-// Interacciones (menu Y formulario)
+
 function mostrarSeccion(idSeccion, elLink) {
     document.querySelectorAll(".seccion-modulo").forEach(sec => sec.classList.add("d-none"));
     document.getElementById(idSeccion)?.classList.remove("d-none");
@@ -89,6 +89,7 @@ function configurarFormularios() {
         formSolicitud.addEventListener("submit", function (e) {
             e.preventDefault();
             const msg = document.getElementById("solicitudMensaje");
+            
             msg.textContent = "Solicitud ingresada correctamente con folio SOL-104.";
             msg.style.color = "#198754";
             
