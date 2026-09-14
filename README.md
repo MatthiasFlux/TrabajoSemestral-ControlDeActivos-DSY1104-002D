@@ -54,7 +54,7 @@ TrabajoSemestral-ControlDeActivos-DSY1104-002D/
    cd TrabajoSemestral-ControlDeActivos-DSY1104-002D
    ```
 
-3. Abrir `index.html` en un navegador web
+3. Abrir `loginRegistro.html` en un navegador web
 
 ## Personalización
 
