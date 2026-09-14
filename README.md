@@ -34,12 +34,12 @@ Este proyecto corresponde al desarrollo de una interfaz web para la gestión y c
 
 ```
 TrabajoSemestral-ControlDeActivos-DSY1104-002D/
-├── loginRegistro.html              # Página principal
-├── dashArrendatario.html              # Vista de arrendatario
-├── dashJefeMantenimiento.html              # Visto de Jefe de mantenimiento
-├── styles.css              # Estilos personalizados
-├── script.js               # Lógica JavaScript y validaciones
-└── README.md              # Este archivo
+├── loginRegistro.html            # Página principal
+├── dashArrendatario.html         # Vista de arrendatario
+├── dashJefeMantenimiento.html    # Visto de Jefe de mantenimiento
+├── styles.css                    # Estilos personalizados
+├── validaciones.js               # Lógica JavaScript y validaciones
+└── README.md                     # Este archivo
 ```
 
 ## Cómo Usar
